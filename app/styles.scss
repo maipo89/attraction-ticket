@@ -1,0 +1,23 @@
+// Lato Google Font //
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+// Scss files imported //
+@import "styles/variables";
+@import "styles/logo";
+@import "styles/header";
+@import "styles/footer";
+@import "styles/search-results";
+@import "styles/search";
+@import "styles/search-input";
+
+body {
+    background-color: $white;
+    color: $black;
+    font-family: 'Lato', sans-serif;
+}
+
+section {
+    &:last-of-type {
+        background-color: $light-gray;
+    }
+}

@@ -1,0 +1,28 @@
+.logo-attraction-ticket {
+    @media (max-width: $phone) {
+        width: 240px;
+    }
+    .cls-1 {
+        fill: none;
+    }
+
+    .cls-2 {
+        clip-path: url(#clip-path);
+    }
+
+    .cls-3 { 
+        fill:url(#linear-gradient);
+    }
+
+    .cls-4 { 
+        fill:#004a6d;
+    }
+
+    .cls-5 { 
+        fill:#00aeef;
+    }
+
+    .cls-6 {
+        fill:#004c6c;
+    }
+}

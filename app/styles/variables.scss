@@ -1,0 +1,23 @@
+// Colors
+
+$black: #000000;
+$white: #ffffff;
+$light-gray: #f4f4f4;
+$dark-gray: #e4e4e4;
+$blue: #1a9ee2;
+$light-blue: #e3f2fe;
+$dark-blue: #00496c;
+$electric-blue: #06406f;
+$darker-blue: #002739;
+$green: #00c853;
+
+// Breakpoints
+$desktop: 1280px;
+$phone: 600px;
+
+// Mixin
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

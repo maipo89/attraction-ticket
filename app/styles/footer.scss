@@ -1,0 +1,13 @@
+.footer {
+    @include center-flex;
+    background-color: $dark-blue;
+
+    .logo-attraction-ticket {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+            fill: $white;
+        }
+    }
+}

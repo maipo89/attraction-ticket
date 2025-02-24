@@ -1,0 +1,78 @@
+.search-input {
+    height: 60px;
+    background-color: $light-blue;
+    border: 2px solid $blue;
+    border-radius: 35px;
+    width: 40%;
+    @include center-flex;
+    position: relative;
+
+    @media (max-width: $desktop) {
+        width: 75%;
+    }
+
+    @media (max-width: $phone) {
+        width: 100%;
+    }
+    
+    input {
+        height: 56px;
+        width: 69%;
+        border: 0;
+        position: relative;
+        background-color: $light-blue;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        padding-left: 65px;
+        border-radius: 35px;
+        @media (max-width: $phone) {
+            padding-left: 50px;
+        }
+
+        &::placeholder {
+            font-size: 18px;
+            color: $electric-blue;
+            font-style: italic;
+            @media (max-width: $phone) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 25px;
+        z-index: 2;
+        pointer-events: none;
+        @media (max-width: $phone) {
+            left: 18px;
+        }
+    }
+    
+    button {
+        width: 30%;
+        background-color: $dark-blue;
+        height: 63.5px;
+        color: $white;
+        border-radius: 35px;
+        border: none;
+        position: relative;
+        left: 2px;
+        cursor: pointer;
+        font-size: 18px;
+
+        @media (max-width: $phone) {
+            width: 40%;
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: $darker-blue;
+        }
+
+        &:focus {
+            border: 2px solid $blue;
+        }
+    }
+}

@@ -1,0 +1,259 @@
+.search-results {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 100px 20px;
+
+    h1 {
+        font-size: 50px;
+        color: $black;
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        @media (max-width: $desktop) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $phone) {
+            font-size: 25px;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        border-radius: 30px;
+        height: 260px;
+        background-color: $white;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 1px 6px 2px rgba(0, 0, 0, .1);
+
+            img {
+                transform: scale(1.1);
+                transition: transform 0.3s ease;
+            }
+        }
+
+        @media (max-width: $desktop) {
+            flex-direction: column;
+            align-items: center;
+            height: 680px;
+        }
+    }
+
+    &__image {
+        border-radius: 28px;
+        overflow: hidden;
+        width: 30%;
+        height: 100%;
+        position: relative;
+
+        @media (max-width: $desktop) {
+            width: 100%;
+            height: 360px;
+        }
+
+        @media (max-width: $phone) {
+            height: 280px;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        &__tag {
+            background-color: $dark-blue;
+            color: white;
+            border-radius: 28px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 8px 14px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+
+            p {
+                font-size: 13px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__info {
+        width: 50%;
+        padding: 40px 50px;
+
+        @media (max-width: $desktop) {
+            width: 90%;
+            padding: 0;
+        }
+
+        h2 {
+            color: $blue;
+            margin: 0;
+            font-size: 30px;
+            line-height: 1.3;
+            font-weight: 700;
+
+            @media (max-width: $desktop) {
+                text-align: center;
+                font-size: 27px;
+            }
+
+            @media (max-width: $phone) {
+                font-size: 25px;
+            }
+        }
+
+        p {
+            position: relative;
+            margin-left: 20px;
+            font-size: 18px;
+
+            @media (max-width: $desktop) {
+                text-align: center;
+                width: fit-content;
+            }
+
+            &::before {
+                content: url("data:image/svg+xml, %3Csvg fill='gray' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 395.71 395.71' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738 c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388 C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191 c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z'/%3E%3C/g%3E%3C/svg%3E ");
+                width: 30px;
+                height: 30px;
+                display: block;
+                position: absolute;
+                left: -22px;
+
+                @media (max-width: $desktop) {
+                    left: -28px;
+                }
+            }
+        }
+        &__dest {
+
+            @media (max-width: $desktop) {
+                @include center-flex;
+            }
+        }
+    }
+    &__price {
+        width: 20%;
+        padding: 40px 0;
+
+        @media (max-width: $desktop) {
+            width: 100%;
+            @include center-flex;
+            padding: 0 0 40px 0;        
+        }
+
+        @media (max-width: $phone) {
+            flex-direction: column;      
+        }
+
+        p {
+            color: $dark-blue;
+            font-size: 19px;
+            font-weight: 400;
+            margin: 0;
+            margin: 20px 0;
+
+            @media (max-width: $desktop) {
+                margin: 0 20px;
+                font-size: 15px;
+            }
+
+            @media (max-width: $phone) {
+                flex-direction: column;
+                margin: 20px 0;   
+            }
+
+            &:first-child {
+                margin-top: 0;
+
+                @media (max-width: $desktop) {
+                    margin-right: 20px;
+                    margin-left: 0;
+                }
+
+                @media (max-width: $phone) {
+                    margin-right: 0;  
+                }
+            }
+        }
+        
+        h3 {
+            color: $green;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+
+            @media (max-width: $desktop) {
+                margin: 0;
+                font-size: 22px;
+            }
+
+            strong {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &-before, &-empty {
+        height: 520px;
+        max-width: 1440px;
+        margin: 0 auto;
+        @include center-flex;
+
+        p {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+        }
+    }
+
+    &-pagination {
+        @include center-flex;
+        margin-top: 100px;
+
+        span {
+           border: 2px solid $blue;
+           border-radius: 50%;
+           background-color: $blue;
+           padding: 18px 25px;
+           color: $white;
+           font-size: 25px;
+           margin: 0 15px;
+           @media (max-width: $phone) {
+               font-size: 15px;  
+           }
+
+        }
+
+        a {
+            font-size: 25px;
+            outline: none;
+            text-decoration: none;
+            border: 2px solid $blue;
+            border-radius: 50%;
+            padding: 18px 25px;
+            color: $blue;
+            background-color: $white;
+
+            @media (max-width: $phone) {
+                font-size: 15px;  
+            }
+
+            &:hover {
+                background-color: $blue;
+                color: white;
+            }
+        }
+    }
+}
